@@ -3,106 +3,163 @@
 <head>
     <title>HTML FORM</title>
     <meta charset="UTF-8" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 </head>
 <body>
-    <h1>Workshop #HTML-FORM</h1>
-    <table>
-        <tr>
-          <td>ชื่อ</td>
-          <td>
-                <form>
-                <input type="text" name="fname"><br>
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td>สกุล</td>
-            <td>
-                <form>
-                <input type="text" name="lname"><br>
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td>วัน/เดือน/ปีเกิด</td>
-            <td>
-                <form>
-                <input type="date" name="birthday"><br>
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td>อายุ</td>
-            <td>
-                <form>
-                <input type="number" id="age" name="age">
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td>เพศ</td>
-            <td>
-                <form>
-                <input type="radio" id="sex" name="men">
-                <label for="men">ชาย</label>
-                <input type="radio" id="sex" name="woman">
-                <label for="woman">หญิง</label><br>
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td>รูป</td>
-            <td>
-                <form>
-                <input type="file" id="picture" name="picture">
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td>ที่อยู่</td>
-            <td>
-                <form>
-                <textarea rows="5" cols="25"></textarea>
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td>สีที่ชอบ</td>
-            <td>
-                <form>
-                <select id="favConlour" name="favConlour">
-                    <option value="red">สีแดง</option>
-                    <option value="yellow">สีเหลือง</option>
-                    <option value="blue">สีฟ้า</option>
-                    <option value="green">สีเขียว</option>
-                    <option value="pink">สีชมพู</option>
-                </select>
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td>แนวเพลงที่ชอบ</td>
-            <td>
-                <form>
-                <input type="radio" id="favSongGerne" name="forLife">
-                <label for="forLife">เพื่อชีวิต</label>
-                <input type="radio" id="favSongGerne" name="folk">
-                <label for="folk">ลูกทุ่ง</label>
-                <input type="radio" id="favSongGerne" name="others">
-                <label for="others">อื่นๆ</label><br>
-            </td>
-        </tr>
-    </table>
-    </form>
-        <br>
-        <input type="checkbox" id="agreement" name="agreement">
-        <label for="agreement">ยินยอมให้เก็บข้อมูล</label><br>
-    </form> 
-    <form>
-        <br><br>
-        <button type="reset" value="reset">Reset</button>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-        <button type="submit" value="submit">Submit</button>
-    </form>
+    <div class="container mb-3" style="margin-top: 30px;">
+        <div class="mb-3 row">
+          <div class="col-3">
+            <label for="exampleFormControlInput1" class="form-label">ชื่อ</label>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" id="fname" placeholder="ชื่อ">
+          </div>
+        </div>
+    </div>
+    <div class="container mb-3">
+        <div class="mb-3 row">
+          <div class="col-3">
+            <label for="exampleFormControlInput1" class="form-label">สกุล</label>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" id="lname" placeholder="นามสกุล">
+          </div>
+        </div>
+    </div>
+    <div class="container mb-3">
+        <div class="mb-3 row">
+          <div class="col-3">
+            <label for="exampleFormControlInput1" class="form-label">วัน/เดือน/ปีเกิด</label>
+          </div>
+          <div class="col">
+            <input type="date" class="form-control" id="birthday">
+          </div>
+        </div>
+    </div>
+    <div class="container mb-3">
+        <div class="mb-3 row">
+          <div class="col-3">
+            <label for="exampleFormControlInput1" class="form-label">อายุ</label>
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" id="age">
+          </div>
+        </div>
+    </div>
+    <div class="container mb-3">
+        <div class="row">
+          <div class="col-3">
+            <label for="exampleFormControlInput1">เพศ</label>
+          </div>
+          <div class="col">
+            <input class="form-check-input" type="radio" name="flexRadioFirst" id="male">
+            <label class="form-check-label" for="male">
+                ชาย
+            </label>
+          </div>
+        </div>
+        <div class="mb-3 row">
+            <div class="col-3"></div>
+            <div class="col">
+              <input class="form-check-input" type="radio" name="flexRadioFirst" id="female">
+              <label class="form-check-label" for="female">
+                  หญิง
+              </label>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-3">
+        <div class="mb-3 row">
+          <div class="col-3">
+            <label for="exampleFormControlInput1" class="form-label">รูป</label>
+          </div>
+          <div class="col">
+            <input type="file" class="form-control" id="image">
+          </div>
+        </div>
+    </div>
+    <div class="container mb-3">
+        <div class="mb-3 row">
+          <div class="col-3">
+            <label for="exampleFormControlInput1" class="form-label">ที่อยู่</label>
+          </div>
+          <div class="col">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+          </div>
+        </div>
+    </div>
+    <div class="container mb-3">
+        <div class="mb-3 row">
+          <div class="col-3">
+            <label for="exampleFormControlInput1" class="form-label">สีที่ชอบ</label>
+          </div>
+          <div class="col">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>กดเพื่อเลือกสี</option>
+                <option value="1">สีแดง</option>
+                <option value="2">สีเขียว</option>
+                <option value="3">สีชมพู</option>
+                <option value="4">สีเหลือง</option>
+                <option value="5">สีฟ้า</option>
+            </select>
+          </div>
+        </div>
+    </div>
+    <div class="container mb-3">
+        <div class="row">
+          <div class="col-3">
+            <label for="exampleFormControlInput1">เพลงที่ชอบ</label>
+          </div>
+          <div class="col">
+            <input class="form-check-input" type="radio" name="flexRadioSecond" id="forlife">
+            <label class="form-check-label" for="forlife">
+                เพื่อชีวิต
+            </label>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-3"> </div>
+            <div class="col">
+              <input class="form-check-input" type="radio" name="flexRadioSecond" id="folk">
+              <label class="form-check-label" for="folk">
+                  ลูกทุ่ง
+              </label>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <div class="col-3"> </div>
+            <div class="col">
+              <input class="form-check-input" type="radio" name="flexRadioSecond" id="other">
+              <label class="form-check-label" for="other">
+                  อื่นๆ
+              </label>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-3">
+        <div class="mb-3 row">
+          <div class="col-3">
+            <input class="form-check-input" type="checkbox" value="" id="agreement">
+            <label class="form-check-label" for="agreement">
+                ยินยอมให้เก็บข้อมูล
+            </label>
+          </div>
+        </div>
+    </div>
+    <div class="container mb-3">
+        <div class="mb-3 row">
+          <div class="col-3" style="width: 92%;">
+            <input class="btn btn-secondary" type="reset" value="Reset">
+          </div>
+          <div class="col">
+            <input class="btn btn-success" type="submit" value="Submit">
+          </div>
+        </div>
+    </div>
 </body>
 </html>
