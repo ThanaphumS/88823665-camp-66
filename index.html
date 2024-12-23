@@ -11,10 +11,11 @@
     </style>
 </head>
 <body>
+  <form>
     <div class="container mb-3" style="margin-top: 30px;">
         <div class="mb-3 row">
           <div class="col-3">
-            <label for="exampleFormControlInput1" class="form-label">ชื่อ</label>
+            <label for="exampleFormControlInput1" class="form-label">ชื่อ<span style="color: red;font-weight: 700;">*</span></label>
           </div>
           <div class="col">
             <input type="text" class="form-control" id="fname" placeholder="ชื่อ">
@@ -153,13 +154,16 @@
     </div>
     <div class="container mb-3">
         <div class="mb-3 row">
-          <div class="col-3" style="width: 92%;">
+          <div class="col-3">
             <input class="btn btn-secondary" type="reset" value="Reset">
           </div>
           <div class="col">
-            <input class="btn btn-success" type="submit" value="Submit">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <input class="btn btn-success" type="submit" value="Submit">
+            </div>
           </div>
         </div>
     </div>
+  </form>
 </body>
 </html>
