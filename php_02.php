@@ -7,16 +7,12 @@
     </head>
     <body>
         <div class="container mt-5">
-            <?php $myvar = 2; ?>
-            <?php $sum; ?>
-            <h1>สูตรคูณแม่ <?php echo $myvar; ?></h1>
             <?php
             for ($i=1; $i <= 100; $i++) {
             ?>
             <div class="row">
-                <div class="h2 col text-end"> <?php echo $myvar," x ", $i, " = "; ?></div>
-                <?php $sum = $myvar * $i; ?>
-                <div class="h2 col text-start"> <?php echo $sum; ?></div>
+                <div class="h2 col text-end"> <?php echo $i, " เป็น "; ?></div>
+                <div class="h2 col text-start"> <?php echo $i % 2 == 0 ? "เลขคู่" : "เลขคี่"; ?></div>
             </div>
             <?php } ?>
         </div>    
