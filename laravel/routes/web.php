@@ -12,9 +12,11 @@ Route::get('/login',
 Route::get('/register',
     [RegisterController::class,'register']);
 
-Route::get('/home', function(){
-    return view('layouts.default');
-});
+Route::get('/home',
+    [HomeController::class,'home']);
+
+Route::get('/',
+    [HomeController::class,'home']);
 
 Route::get('/hello', function () {
     return "<h1>Hello World!</h1>";
