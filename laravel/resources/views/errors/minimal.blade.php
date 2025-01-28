@@ -1,30 +1,14 @@
 @extends('layouts.default')
+
 @section('content')
-    <div class="d-flex justify-content-center align-items-center vh-100">
-        <section class="content">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <div class="login-page">
         <div class="error-page">
-            <h2 class="headline text-warning"> 404</h2>
-
+            @yield('code')
             <div class="error-content">
-            <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oops! Page not found.</h3>
-
-            <p>
-                We could not find the page you were looking for.
-                Meanwhile, you may <a href="/88823665-camp-66/laravel/home">return to dashboard</a> or try using the search form.
-            </p>
-
-            <form class="search-form">
-                <div class="input-group">
-                <input type="text" name="search" class="form-control" placeholder="Search">
-
-                <div class="input-group-append">
-                    <button type="submit" name="submit" class="btn btn-warning"><i class="fas fa-search"></i>
-                    </button>
-                </div>
-                </div>
-            </form>
+                @yield('message')
             </div>
         </div>
-        </section>
     </div>
 @endsection
