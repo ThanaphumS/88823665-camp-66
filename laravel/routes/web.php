@@ -5,18 +5,25 @@ use App\Http\Controllers\MyController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 
 Route::get('/login',
-    [LoginController::class,'login']);
+    [LoginController::class,'index']);
 
 Route::get('/register',
-    [RegisterController::class,'register']);
+    [RegisterController::class,'index']);
+
+Route::post('/register',
+    [RegisterController::class,'create']);
 
 Route::get('/home',
-    [HomeController::class,'home']);
+    [HomeController::class,'index']);
 
 Route::get('/',
-    [HomeController::class,'home']);
+    [HomeController::class,'index']);
+
+Route::get('/users',
+    [UserController::class,'index']);
 
 Route::get('/hello', function () {
     return "<h1>Hello World!</h1>";
