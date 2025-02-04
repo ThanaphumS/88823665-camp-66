@@ -25,6 +25,15 @@ Route::get('/',
 Route::get('/users',
     [UserController::class,'index']);
 
+Route::get('/user/{id}',
+    [UserController::class,'edit']);
+
+Route::put('/user',
+    [UserController::class,'edit_action']);
+
+Route::delete('/user',
+    [UserController::class,'delete']);
+
 Route::get('/hello', function () {
     return "<h1>Hello World!</h1>";
 });

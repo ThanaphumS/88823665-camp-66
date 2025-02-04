@@ -10,7 +10,7 @@
     <div class="card">
       <div class="card-body register-card-body">
         <p class="register-box-msg">Register a new membership</p>
-        <form action="{{url('/register')}}" onsubmit="return clickme()" method="post">
+        <form action="{{url('/register')}}" onsubmit="" method="post">
           @csrf
           <div class="input-group mb-3">
             <input type="text" name="name" id="name" class="form-control" placeholder="Full Name" />
@@ -84,8 +84,8 @@
   function clickme(){
     let name = document.getElementById('name');
         //name.value = "New Teat" เปลี่ยนค่า
-        name = $('#name').val("new with jquery")
-        $('#name').addClass('is-invalid') //error
+        //name = $('#name').val("new with jquery")
+        //$('#name').addClass('is-invalid') //error
         //$('#name').addClass('is-valid') //ok
         // email format @[a-z].[a-z]
         // password format [0-9][a-z][A-Z]
