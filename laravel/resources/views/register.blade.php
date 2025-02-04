@@ -10,18 +10,18 @@
     <div class="card">
       <div class="card-body register-card-body">
         <p class="register-box-msg">Register a new membership</p>
-        <form action="{{url('/register')}}" method="post">
+        <form action="{{url('/register')}}" onsubmit="return clickme()" method="post">
           @csrf
           <div class="input-group mb-3">
-            <input type="text" name="name" class="form-control" placeholder="Full Name" />
+            <input type="text" name="name" id="name" class="form-control" placeholder="Full Name" />
             <div class="input-group-text"><span class="bi bi-person"></span></div>
           </div>
           <div class="input-group mb-3">
-            <input type="email" name="email" class="form-control" placeholder="Email" />
+            <input type="email" name="email" id="email" class="form-control" placeholder="Email" />
             <div class="input-group-text"><span class="bi bi-envelope"></span></div>
           </div>
           <div class="input-group mb-3">
-            <input type="password" name="password" class="form-control" placeholder="Password" />
+            <input type="password" name="password" id="pass" class="form-control" placeholder="Password" />
             <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
           </div>
           <!--begin::Row-->
@@ -53,4 +53,48 @@
     </div>
   </div>
 </div>
-  @endsection
+@endsection
+@section('scripts')
+<script>
+  //console.log("Hello World!")
+</script>
+<script>
+  //alert("Hello World")
+  let myval
+  var mayval2 
+  const PI=3.14 //ตัวแปรค่าคงที่
+  pi = 2
+  //PI = 2 error เปลี่ยนค่าไม่ได้
+  console.log(PI,pi)
+
+  let myarry = Array(1,2,3);
+  //หรือ let myarry = [];
+
+  myarry[0] = 1;
+  myarry["1"] = 2;
+  myarry.push(3)
+  myarry.push(4)
+  console.log(myarry)
+  myarry.pop()
+  console.log(myarry)
+  for(a=1; a<10 ; a++){
+    console.log(a);
+  }
+  
+  function clickme(){
+    let name = document.getElementById('name');
+        //name.value = "New Teat" เปลี่ยนค่า
+        name = $('#name').val("new with jquery")
+        $('#name').addClass('is-invalid') //error
+        //$('#name').addClass('is-valid') //ok
+        // email format @[a-z].[a-z]
+        // password format [0-9][a-z][A-Z]
+    console.log("Hello", name);
+    return false;
+  }
+
+  $(document).ready(function(){
+    //alert("Hello world")
+  })
+</script>
+@endsection
