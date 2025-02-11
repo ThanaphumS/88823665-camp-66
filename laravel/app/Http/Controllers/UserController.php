@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     function index(){
         $users = User::all();
-        return view('user.user',['users' => $users]);
+        return view('user.index',['users' => $users]);
     }
 
     function edit($id){

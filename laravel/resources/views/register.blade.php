@@ -15,6 +15,8 @@
           <div class="input-group mb-3">
             <input type="text" name="name" id="name" class="form-control" placeholder="Full Name" />
             <div class="input-group-text"><span class="bi bi-person"></span></div>
+            <div class="valid-feedback">OK</div>
+            <div class="invalid-feedback" id="invalid-name">กรุณาระบุข้อมูล name</div>
           </div>
           <div class="input-group mb-3">
             <input type="email" name="email" id="email" class="form-control" placeholder="Email" />
